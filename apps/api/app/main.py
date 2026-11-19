@@ -40,10 +40,17 @@ async def lifespan(_app):
     yield
 
 
-app = FastAPI(lifespan=lifespan, title="MediBridge AI API", version="0.1.0",
-              description="AI assists. Doctors decide. Patients stay in control. Prototype: synthetic data only.")
-app.add_middleware(CORSMiddleware, allow_origins=[o.strip() for o in settings.cors_origins.split(",")],
-                   allow_credentials=True, allow_methods=["*"], allow_headers=["*"])
+app = FastAPI(lifespan=lifespan, title="HEALYNX-AI API", version="0.1.0",
+              description="AI assists. Doctors decide. Patients stay in control. Bangladesh Health Stack.")
+_configured_origins = [o.strip() for o in settings.cors_origins.split(",") if o.strip()]
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=_configured_origins,
+    allow_origin_regex=r"https:\/\/.*\.vercel\.app",
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 install_error_handlers(app)
 
 

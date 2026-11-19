@@ -42,6 +42,15 @@ class Settings(BaseSettings):
     jwt_audience: str = "medibridge-web"
     session_hours: int = 8
 
+    @property
+    def normalized_database_url(self) -> str:
+        url = (self.database_url or "").strip()
+        if url.startswith("postgres://"):
+            return url.replace("postgres://", "postgresql+psycopg://", 1)
+        if url.startswith("postgresql://") and not url.startswith("postgresql+"):
+            return url.replace("postgresql://", "postgresql+psycopg://", 1)
+        return url
+
     def validate_production(self):
         """Fail fast: never boot a production instance with insecure defaults."""
         if self.app_env == "dev":
