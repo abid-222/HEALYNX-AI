@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![HEALYNX-AI Banner](https://raw.githubusercontent.com/abid-222/HEALYNX-AI/main/apps/web/public/favicon.ico)
+![HEALYNX-AI Banner](./apps/web/public/healynx-banner.svg)
 
 ### **Next-Generation Open Clinical Intelligence & Healthcare Orchestration Engine for Bangladesh**
 *Engineered with pride by **ByteForce***
