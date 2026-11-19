@@ -1,0 +1,63 @@
+{
+  "name": "HEALYNX-AI Design Tokens",
+  "version": "2.6.4",
+  "author": "ByteForce",
+  "platform": "Bangladesh Clinical Intelligence Stack",
+  "color": {
+    "brand": {
+      "primary": { "value": "#10B981", "type": "color", "description": "Neon Clinical Emerald" },
+      "primary-glow": { "value": "rgba(16, 185, 129, 0.35)", "type": "color" },
+      "cyan": { "value": "#06B6D4", "type": "color", "description": "Telemetry Cyan" },
+      "violet": { "value": "#8B5CF6", "type": "color", "description": "AI Explainer Violet" }
+    },
+    "background": {
+      "canvas": { "value": "#05080E", "type": "color", "description": "Deep Cyber Dark" },
+      "surface-1": { "value": "#0D131F", "type": "color", "description": "Primary Container Surface" },
+      "surface-2": { "value": "#151E2E", "type": "color", "description": "Card Elevated Surface" },
+      "surface-3": { "value": "#1F293D", "type": "color", "description": "Subtle Border Line" }
+    },
+    "feedback": {
+      "danger": { "value": "#EF4444", "type": "color", "description": "Emergency Red Flag Alert" },
+      "warning": { "value": "#F59E0B", "type": "color", "description": "Pre-diabetic / Wait Alert" },
+      "success": { "value": "#10B981", "type": "color", "description": "Normal Clinical Range" },
+      "info": { "value": "#38BDF8", "type": "color", "description": "System Telemetry" }
+    },
+    "text": {
+      "ink": { "value": "#FFFFFF", "type": "color", "description": "High-contrast heading" },
+      "muted": { "value": "#94A3B8", "type": "color", "description": "Secondary label" },
+      "dim": { "value": "#64748B", "type": "color", "description": "Microcopy / timestamps" }
+    }
+  },
+  "typography": {
+    "fontFamilies": {
+      "heading": { "value": "Inter, Hind Siliguri, sans-serif" },
+      "body": { "value": "Inter, Hind Siliguri, sans-serif" },
+      "mono": { "value": "JetBrains Mono, monospace" }
+    },
+    "fontSizes": {
+      "xs": { "value": "11px" },
+      "sm": { "value": "13px" },
+      "base": { "value": "15px" },
+      "lg": { "value": "18px" },
+      "xl": { "value": "22px" },
+      "2xl": { "value": "28px" },
+      "3xl": { "value": "36px" },
+      "hero": { "value": "48px" }
+    }
+  },
+  "borderRadius": {
+    "sm": { "value": "8px" },
+    "md": { "value": "12px" },
+    "lg": { "value": "16px" },
+    "xl": { "value": "24px" },
+    "full": { "value": "9999px" }
+  },
+  "artboards": [
+    { "id": "AB-01", "name": "Landing Page & Telemetry Radar", "path": "/" },
+    { "id": "AB-02", "name": "Biomarker Trend Studio", "path": "/timeline" },
+    { "id": "AB-03", "name": "Doctor Chamber & Telehealth", "path": "/appointments" },
+    { "id": "AB-04", "name": "Cryptographic QR Prescription", "path": "/prescriptions" },
+    { "id": "AB-05", "name": "100% Offline Emergency First-Aid", "path": "/emergency" },
+    { "id": "AB-06", "name": "Dual-Gate Clinical Triage & Navigator", "path": "/navigator" }
+  ]
+}
