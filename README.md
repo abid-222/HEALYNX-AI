@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![HEALYNX-AI Banner](https://raw.githubusercontent.com/abid-222/MediBrdige-BY-ByteForce/main/apps/web/public/favicon.ico)
+![HEALYNX-AI Banner](https://raw.githubusercontent.com/abid-222/HEALYNX-AI/main/apps/web/public/favicon.ico)
 
 ### **Next-Generation Open Clinical Intelligence & Healthcare Orchestration Engine for Bangladesh**
 *Engineered with pride by **ByteForce***
@@ -139,8 +139,8 @@ Requires **Python 3.12+** and **Node.js 18+**.
 
 ```bash
 # 1. Clone repository
-git clone https://github.com/abid-222/MediBrdige-BY-ByteForce.git
-cd MediBrdige-BY-ByteForce
+git clone https://github.com/abid-222/HEALYNX-AI.git
+cd HEALYNX-AI
 
 # 2. Automated environment setup & dependencies
 make setup
