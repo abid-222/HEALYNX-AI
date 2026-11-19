@@ -346,6 +346,9 @@ export default function AppointmentsPage() {
                     ? "bg-red-500/20 text-red-400 border border-red-500/40 animate-pulse"
                     : "bg-emerald-500/20 text-emerald-300 border border-emerald-500/40"
                 }`}>
+                  {countdown?.inSession
+                    ? (isBn ? "🔴 লাইভ কনসালটেশন সেশন চলছে" : "🔴 DOCTOR LIVE IN SESSION")
+                    : (isBn ? "🟢 টেলিহেলথ লাইভ চেম্বার সক্রিয়" : "🟢 TELEHEALTH CHAMBER ACTIVE")}
                   {role === "doctor"
                     ? (countdown?.inSession
                         ? (isBn ? "🔴 রোগী কনসালটেশন রুমে সংযুক্ত" : "🔴 PATIENT IN SESSION")
@@ -362,6 +365,7 @@ export default function AppointmentsPage() {
               <div>
                 <h3 className="text-lg sm:text-xl font-heading font-black text-foreground flex items-center gap-2">
                   <Stethoscope className="h-5 w-5 text-emerald-400" />
+                  {liveChamberAppt.doctor_name || "Specialist Physician"}
                   {role === "doctor"
                     ? (isBn
                         ? `রোগী: ${liveChamberAppt.patient_name || liveChamberAppt.patient_id || "রোগীর নাম"}`
@@ -424,6 +428,7 @@ export default function AppointmentsPage() {
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-6 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-heading font-black text-sm shadow-[0_0_20px_rgba(16,185,129,0.4)] transition-all hover:scale-[1.02] active:scale-[0.98]"
               >
                 <Video className="h-5 w-5 animate-pulse" />
+                <span>{isBn ? "১-ক্লিকে ভিডিও কলে প্রবেশ করুন" : "Join Telehealth Chamber"}</span>
                 <span>
                   {role === "doctor"
                     ? (isBn ? "চেম্বারে রোগী দেখা শুরু করুন" : "Start Patient Consultation")

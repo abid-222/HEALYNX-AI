@@ -106,25 +106,6 @@ def create(body: ApptIn, idempotency_key: str | None = Header(default=None),
     try:
         db.flush()
         db.add(AppointmentEvent(appointment_id=a.id, from_status=None, to_status="requested", actor_id=user.id))
-        # Ensure CareRelationship exists immediately for doctor-patient continuity
-        rel = db.scalar(select(CareRelationship).where(CareRelationship.patient_id == user.id,
-                                                       CareRelationship.doctor_id == body.doctor_id))
-        if not rel:
-            db.add(CareRelationship(patient_id=user.id, doctor_id=body.doctor_id, facility_id=facility_id,
-                                    origin="appointment", active=True))
-        elif not rel.active:
-            rel.active, rel.ended_at = True, None
-
-        if body.share_opt_in:
-            res = ["profile", "documents", "observations", "notes"]
-            existing_c = db.scalar(select(Consent).where(Consent.patient_id == user.id,
-                                                         Consent.grantee_id == body.doctor_id,
-                                                         Consent.consent_type == "doctor_share",
-                                                         Consent.revoked_at.is_(None)))
-            if not existing_c:
-                db.add(Consent(patient_id=user.id, consent_type="doctor_share", grantee_id=body.doctor_id,
-                               scope={"resources": res, "document_ids": body.share_document_ids or None},
-                               expires_at=datetime.now(timezone.utc) + timedelta(days=30)))
         db.commit()
     except IntegrityError:
         db.rollback()   # unique index on (doctor, start) or idempotency key fired under concurrency

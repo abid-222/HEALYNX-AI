@@ -3,7 +3,7 @@ from fastapi import APIRouter, Depends
 from pydantic import BaseModel
 from sqlalchemy import select
 from sqlalchemy.orm import Session
-from app.core.config import STALE_AFTER_DAYS
+from app.core.config import STALE_AFTER_DAYS, settings
 from app.core.db import get_db
 from app.core.errors import AppError
 from app.models import DirectoryReport, DoctorFacility, DoctorProfile, Facility, FacilityService, Specialty
@@ -18,7 +18,7 @@ CACHE_TTL = 60.0  # In-memory fast cache
 
 def _get_all_doctors_bulk(db: Session) -> list[dict]:
     now = time.time()
-    if _DOCTORS_CACHE["items"] and (now - _DOCTORS_CACHE["ts"]) < CACHE_TTL:
+    if settings.app_env == "production" and _DOCTORS_CACHE["items"] and (now - _DOCTORS_CACHE["ts"]) < CACHE_TTL:
         return _DOCTORS_CACHE["items"]
 
     docs = db.scalars(select(DoctorProfile).order_by(DoctorProfile.full_name)).all()
@@ -72,7 +72,7 @@ def _get_all_doctors_bulk(db: Session) -> list[dict]:
 
 def _get_all_facilities_bulk(db: Session) -> list[dict]:
     now = time.time()
-    if _FACILITIES_CACHE["items"] and (now - _FACILITIES_CACHE["ts"]) < CACHE_TTL:
+    if settings.app_env == "production" and _FACILITIES_CACHE["items"] and (now - _FACILITIES_CACHE["ts"]) < CACHE_TTL:
         return _FACILITIES_CACHE["items"]
 
     rows = db.scalars(select(Facility).order_by(Facility.name)).all()
