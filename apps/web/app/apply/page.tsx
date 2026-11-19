@@ -146,7 +146,7 @@ export default function ApplyPage() {
     <div className="space-y-6 max-w-4xl mx-auto pb-16 pt-2">
       <PageHeader
         title="Clinical Accreditation & Doctor Registration"
-        subtitle="Apply for verified practitioner or healthcare facility listing on the MediBridge clinical network."
+        subtitle="Apply for verified practitioner or healthcare facility listing on the HEALYNX clinical network."
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "Directory", href: "/directory" },

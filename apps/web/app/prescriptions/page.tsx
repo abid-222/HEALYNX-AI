@@ -92,7 +92,7 @@ export default function PatientPrescriptionsPage() {
       const url = window.URL.createObjectURL(blob);
       const a = document.createElement("a");
       a.href = url;
-      a.download = `Prescription-NIRAMOY-${rxId.slice(0, 8)}.pdf`;
+      a.download = `Prescription-HEALYNX-${rxId.slice(0, 8)}.pdf`;
       document.body.appendChild(a);
       a.click();
       a.remove();
@@ -112,7 +112,7 @@ export default function PatientPrescriptionsPage() {
   };
 
   const getVerificationUrl = (rx: any) => {
-    return `https://niramoy.ai/verify/rx/${rx.id}?auth=bmdc_${rx.doctor_bmdc || "reg"}&ts=${encodeURIComponent(
+    return `https://healynx.ai/verify/rx/${rx.id}?auth=bmdc_${rx.doctor_bmdc || "reg"}&ts=${encodeURIComponent(
       rx.consultation_date || ""
     )}`;
   };
@@ -220,7 +220,7 @@ export default function PatientPrescriptionsPage() {
                 <div className="space-y-2 flex-1">
                   <div className="flex flex-wrap items-center gap-2">
                     <span className="font-mono text-xs font-bold text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20">
-                      NIRAMOY-RX-{rx.id.slice(0, 8).toUpperCase()}
+                      HEALYNX-RX-{rx.id.slice(0, 8).toUpperCase()}
                     </span>
                     <span
                       className={`text-xs font-bold uppercase tracking-wider px-2 py-0.5 rounded-full ${
@@ -331,8 +331,8 @@ export default function PatientPrescriptionsPage() {
         <ShieldCheck className="h-4 w-4 text-emerald-500 shrink-0 mt-0.5" />
         <p className="leading-relaxed">
           {isBn
-            ? "নিরাময় এআই-এর প্রতিটি ডিজিটাল প্রেসক্রিপশন ক্রিপ্টোগ্রাফিক কিউআর কোড এবং বাংলাদেশ মেডিকেল অ্যান্ড ডেন্টাল কাউন্সিল (বিএমডিসি) নিবন্ধিত লাইসেন্সপ্রাপ্ত ডাক্তারের ডিজিটাল সিগনেচার দ্বারা সুরক্ষিত। যেকোনো ফার্মেসি কিউআর কোড স্ক্যান করে প্রেসক্রিপশনের সত্যতা ১০০% নির্ভুলভাবে যাচাই করতে পারবে।"
-            : "Every digital prescription in Niramoy AI is protected by a cryptographic verifiable QR code and digitally signed by a BMDC-registered medical physician. Any pharmacy or diagnostic center can scan the QR code to verify medicine authenticity instantly."}
+            ? "হিলিংক্স এআই-এর প্রতিটি ডিজিটাল প্রেসক্রিপশন ক্রিপ্টোগ্রাফিক কিউআর কোড এবং বাংলাদেশ মেডিকেল অ্যান্ড ডেন্টাল কাউন্সিল (বিএমডিসি) নিবন্ধিত লাইসেন্সপ্রাপ্ত ডাক্তারের ডিজিটাল সিগনেচার দ্বারা সুরক্ষিত। যেকোনো ফার্মেসি কিউআর কোড স্ক্যান করে প্রেসক্রিপশনের সত্যতা ১০০% নির্ভুলভাবে যাচাই করতে পারবে।"
+            : "Every digital prescription in HEALYNX-AI is protected by a cryptographic verifiable QR code and digitally signed by a BMDC-registered medical physician. Any pharmacy or diagnostic center can scan the QR code to verify medicine authenticity instantly."}
         </p>
       </div>
 
@@ -363,8 +363,8 @@ export default function PatientPrescriptionsPage() {
                   </h4>
                   <p className="text-xs text-muted">
                     {isBn
-                      ? "নিরাময় এআই রেজিস্ট্রি ও বিএমডিসি রেকর্ড দ্বারা যাচাইকৃত।"
-                      : "Certified by Niramoy AI Cryptographic Healthcare Registry."}
+                      ? "হিলিংক্স এআই রেজিস্ট্রি ও বিএমডিসি রেকর্ড দ্বারা যাচাইকৃত।"
+                      : "Certified by HEALYNX-AI Cryptographic Healthcare Registry."}
                   </p>
                 </div>
               </div>
@@ -547,7 +547,7 @@ export default function PatientPrescriptionsPage() {
         <Dialog
           open={!!selectedPrescription}
           onClose={() => setSelectedPrescription(null)}
-          title={`Digital Prescription — NIRAMOY-RX-${selectedPrescription.id.slice(0, 8).toUpperCase()}`}
+          title={`Digital Prescription — HEALYNX-RX-${selectedPrescription.id.slice(0, 8).toUpperCase()}`}
         >
           <div className="space-y-4 max-h-[75vh] overflow-y-auto pr-1">
             {/* Header with Doctor details and Quick QR Trigger */}

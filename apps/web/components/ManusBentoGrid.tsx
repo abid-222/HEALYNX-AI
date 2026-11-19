@@ -242,7 +242,7 @@ export function ManusBentoGrid({ isBn }: { isBn: boolean }) {
                   <span className="text-ptext">Verified</span>
                 </div>
                 <p className="font-bold text-ink truncate text-[11px]">doctor.credential.verify</p>
-                <p className="text-[10px] text-muted truncate">Actor: reviewer@medibridge · BMDC: A-48219</p>
+                <p className="text-[10px] text-muted truncate">Actor: reviewer@healynx.dev · BMDC: A-48219</p>
                 <div className="pt-1 text-[9px] text-muted truncate">
                   Hash: 0x8f2c...7e91a0
                 </div>

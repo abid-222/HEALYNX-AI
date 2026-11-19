@@ -94,7 +94,7 @@ function WelcomeBanner({
         <div className="space-y-1">
           <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-ptext">
             <Sparkles className="h-3.5 w-3.5" />
-            <span>MediBridge AI · Patient Hub</span>
+            <span>HEALYNX-AI · Patient Hub</span>
           </div>
           <h1 className="text-2xl font-bold tracking-tight text-ink md:text-3xl">
             {timeGreeting}, {name || "Patient"}

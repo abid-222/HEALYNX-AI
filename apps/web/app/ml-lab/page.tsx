@@ -413,7 +413,7 @@ export default function MlLabPage() {
               <div>
                 <div className="flex items-center gap-2">
                   <h1 className="text-xl font-bold tracking-tight text-white flex items-center gap-2">
-                    MediBridge <span className="text-emerald-400">ML & Data Science Lab</span>
+                    HEALYNX <span className="text-emerald-400">ML & Data Science Lab</span>
                   </h1>
                   <span className="rounded-full border border-emerald-500/40 bg-emerald-500/10 px-2 py-0.5 text-[11px] font-mono font-medium text-emerald-400">
                     v0.1.0-PROTOTYPE
@@ -497,7 +497,7 @@ export default function MlLabPage() {
             <div>
               <h2 className="text-xl font-bold text-white tracking-tight">Super Admin Clearance Required</h2>
               <p className="text-xs text-[#94a3b8] mt-2 leading-relaxed">
-                The <strong>MediBridge AI ML Studio &amp; Model Science Lab</strong> contains protected neural network parameters, TF-IDF feature weights, and algorithmic inspection pipelines. Access is strictly restricted to authenticated <strong>super_admin</strong> personnel only.
+                The <strong>HEALYNX-AI ML Studio &amp; Model Science Lab</strong> contains protected neural network parameters, TF-IDF feature weights, and algorithmic inspection pipelines. Access is strictly restricted to authenticated <strong>super_admin</strong> personnel only.
               </p>
             </div>
             <div className="p-3 rounded-lg bg-[#060a0e] border border-[#1b2736] text-[11px] font-mono text-[#94a3b8]">
@@ -2116,7 +2116,7 @@ export default function MlLabPage() {
                   Model Confidence Calibration &amp; 0.55 Abstain Gate
                 </h3>
                 <p className="text-xs text-[#94a3b8] leading-relaxed">
-                  In high-stakes healthcare document routing, an overconfident misclassification is significantly more harmful than flagging a document for manual inspection. MediBridge AI enforces a mandatory <strong>0.55 confidence threshold gate</strong>: if the top softmax probability is below 55%, the system actively abstains and routes the document to &apos;other&apos; (triggering doctor or reviewer review).
+                  In high-stakes healthcare document routing, an overconfident misclassification is significantly more harmful than flagging a document for manual inspection. HEALYNX-AI enforces a mandatory <strong>0.55 confidence threshold gate</strong>: if the top softmax probability is below 55%, the system actively abstains and routes the document to &apos;other&apos; (triggering doctor or reviewer review).
                 </p>
                 <div className="p-3 rounded-lg bg-amber-500/10 border border-amber-500/30 text-xs text-amber-200">
                   ⚠️ <strong>Scientific Disclaimer:</strong> Confidence scores reflect internal classifier softmax calibration on synthetic document templates. They do NOT represent guaranteed clinical or medical certainty. AI assists. Doctors decide.
@@ -2360,7 +2360,7 @@ export default function MlLabPage() {
                     # Research Report: Document-Type Classification in Low-Resource Healthcare Triage
                   </h3>
                   <p className="text-[#94a3b8] text-[11px] mt-1">
-                    System Architecture: MediBridge AI · Prototype Version: 0.1.0 · Framework: scikit-learn 1.5.1
+                    System Architecture: HEALYNX-AI · Prototype Version: 0.1.0 · Framework: scikit-learn 1.5.1
                   </p>
                 </div>
 
@@ -2462,7 +2462,7 @@ export default function MlLabPage() {
                 </div>
 
                 <div className="border-t border-[#1b2736] pt-4 text-[11px] text-[#94a3b8]">
-                  <strong>Affiliation:</strong> MediBridge AI Research Initiative · Dhaka, Bangladesh · <em>&ldquo;AI assists. Doctors decide. Patients stay in control.&rdquo;</em>
+                  <strong>Affiliation:</strong> HEALYNX-AI Research Initiative · Dhaka, Bangladesh · <em>&ldquo;AI assists. Doctors decide. Patients stay in control.&rdquo;</em>
                 </div>
               </div>
             </div>

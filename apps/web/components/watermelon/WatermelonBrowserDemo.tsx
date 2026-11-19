@@ -64,7 +64,7 @@ export function WatermelonBrowserDemo({ isBn }: { isBn: boolean }) {
             </div>
             <div className="flex-1 flex justify-center">
               <div className="px-4 py-1 text-[11px] border border-line text-muted font-mono w-full max-w-xs text-center tracking-widest uppercase truncate rounded bg-s1/60">
-                [ MEDIBRIDGE.AI // CLINICAL-GATE.SYS ]
+                [ HEALYNX.AI // CLINICAL-GATE.SYS ]
               </div>
             </div>
             <div className="text-[10px] text-ptext font-mono font-bold hidden sm:block">

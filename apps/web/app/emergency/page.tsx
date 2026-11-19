@@ -92,7 +92,7 @@ export default function EmergencyPage() {
   // Load Medical ID: checks localStorage first, then syncs from patient profile if available
   useEffect(() => {
     try {
-      const stored = localStorage.getItem("niramoy_offline_medical_id");
+      const stored = localStorage.getItem("healynx_offline_medical_id") || localStorage.getItem("niramoy_offline_medical_id");
       if (stored) {
         const parsed = JSON.parse(stored);
         if (parsed && parsed.fullName?.trim()) {
@@ -135,7 +135,7 @@ export default function EmergencyPage() {
       return;
     }
     try {
-      localStorage.setItem("niramoy_offline_medical_id", JSON.stringify(medicalId));
+      localStorage.setItem("healynx_offline_medical_id", JSON.stringify(medicalId));
       setHasCard(true);
       setIsEditingId(false);
       addToast(
@@ -152,6 +152,7 @@ export default function EmergencyPage() {
 
   const handleClearCard = () => {
     try {
+      localStorage.removeItem("healynx_offline_medical_id");
       localStorage.removeItem("niramoy_offline_medical_id");
       setMedicalId(EMPTY_MEDICAL_ID);
       setHasCard(false);

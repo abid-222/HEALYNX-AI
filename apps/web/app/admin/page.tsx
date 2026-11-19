@@ -424,7 +424,7 @@ export default function AdminDashboardPage() {
       const url = URL.createObjectURL(blob);
       const a = document.createElement("a");
       a.href = url;
-      a.download = `medibridge_audit_export_${new Date().toISOString().slice(0, 10)}.csv`;
+      a.download = `healynx_audit_export_${new Date().toISOString().slice(0, 10)}.csv`;
       a.click();
       URL.revokeObjectURL(url);
       addToast("success", "Audit CSV Exported", "Downloaded complete immutable log.");
@@ -1255,7 +1255,7 @@ export default function AdminDashboardPage() {
             </h3>
             <div className="text-xs text-muted space-y-2 leading-relaxed">
               <p>
-                In MediBridge AI, provider listings show their provenance source, last-verified date, and confidence level.
+                In HEALYNX-AI, provider listings show their provenance source, last-verified date, and confidence level.
                 Records not reverified within <b>{directoryQuality.data?.stale_after_days || 90} days</b> automatically receive a
                 <Chip kind="stale" /> badge to prevent patients from relying on stale fees or out-of-date clinic hours.
               </p>
@@ -1384,7 +1384,7 @@ export default function AdminDashboardPage() {
               className="w-full rounded-input border border-line bg-s1 px-3 py-2 text-xs text-ink placeholder:text-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60 transition resize-y min-h-[80px]"
             />
             <p className="text-[11px] text-muted">
-              This reason is permanently recorded in the immutable MediBridge clinical audit log.
+              This reason is permanently recorded in the immutable HEALYNX clinical audit log.
             </p>
           </div>
 

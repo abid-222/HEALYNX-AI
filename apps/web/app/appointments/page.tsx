@@ -120,7 +120,7 @@ export default function AppointmentsPage() {
         user_id: selectedDoctorId,
         full_name: paramDoctorName,
         specialty: "Online Specialist",
-        chambers: [{ fee_label: "Confirmed Telehealth Fee", facility_name: "MediBridge Virtual Care" }]
+        chambers: [{ fee_label: "Confirmed Telehealth Fee", facility_name: "HEALYNX Virtual Care" }]
       };
     }
     return null;
@@ -225,7 +225,7 @@ export default function AppointmentsPage() {
   const liveMeetingUrl = useMemo(() => {
     if (!liveChamberAppt) return "";
     if (liveChamberAppt.meeting_link) return liveChamberAppt.meeting_link;
-    return `https://meet.jit.si/niramoy-telehealth-${liveChamberAppt.id.slice(0, 8)}`;
+    return `https://meet.jit.si/healynx-telehealth-${liveChamberAppt.id.slice(0, 8)}`;
   }, [liveChamberAppt]);
 
   // Appointment Status Transition Action (Confirm, Cancel, Checkin, Complete)
@@ -371,7 +371,7 @@ export default function AppointmentsPage() {
                 <p className="text-xs text-muted flex items-center gap-2 mt-1">
                   <span>{fmtDateTime(liveChamberAppt.slot_start)}</span>
                   <span>•</span>
-                  <span>{liveChamberAppt.facility_name || "Niramoy Virtual Telehealth Clinic"}</span>
+                  <span>{liveChamberAppt.facility_name || "HEALYNX Virtual Telehealth Clinic"}</span>
                 </p>
               </div>
 
@@ -677,7 +677,7 @@ export default function AppointmentsPage() {
                             onClick={() => {
                               setTargetApptForLink(a);
                               setCustomMeetLinkInput(
-                                `https://meet.jit.si/medibridge-telehealth-${a.id.slice(0, 8)}-${a.doctor_id?.slice(0, 6) || "room"}`
+                                `https://meet.jit.si/healynx-telehealth-${a.id.slice(0, 8)}-${a.doctor_id?.slice(0, 6) || "room"}`
                               );
                               setMeetingLinkModalOpen(true);
                             }}
@@ -1090,7 +1090,7 @@ export default function AppointmentsPage() {
               onClick={() => {
                 if (targetApptForLink) {
                   setCustomMeetLinkInput(
-                    `https://meet.jit.si/medibridge-telehealth-${targetApptForLink.id.slice(0, 8)}-${targetApptForLink.doctor_id?.slice(0, 6) || "room"}`
+                    `https://meet.jit.si/healynx-telehealth-${targetApptForLink.id.slice(0, 8)}-${targetApptForLink.doctor_id?.slice(0, 6) || "room"}`
                   );
                 }
               }}

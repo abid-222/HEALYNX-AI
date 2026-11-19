@@ -47,7 +47,7 @@ export function AppLoadingScreen({
 
             <div className="text-center space-y-0.5">
               <h1 className="font-heading text-lg font-bold tracking-tight text-ink flex items-center justify-center gap-1">
-                <span>MediBridge</span>
+                <span>HEALYNX</span>
                 <span className="text-ptext">AI</span>
               </h1>
               <p className="text-[10px] text-muted font-mono tracking-wider uppercase">

@@ -80,7 +80,7 @@ export function WatermelonNavbar() {
                   scrolled ? "text-white" : "text-slate-900 dark:text-white"
                 }`}
               >
-                {isBn ? "নিরাময়" : "Niramoy"}{" "}
+                {isBn ? "হিলিংক্স" : "HEALYNX"}{" "}
                 <span className="text-emerald-500 dark:text-emerald-400 font-mono font-black ml-1">
                   AI
                 </span>

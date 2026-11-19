@@ -86,8 +86,8 @@ export default function SmartCareNavigator() {
       sender: "assistant",
       text:
         locale === "bn"
-          ? "আসসালামু আলাইকুম। আমি আপনার মেডিব্রিজ কেয়ার নেভিগেটর। আপনার শারীরিক কোনো লক্ষণ বা স্বাস্থ্য সমস্যা আমাকে জানান, আমি সঠিক বিশেষজ্ঞ ডাক্তার নির্ধারণ ও পরামর্শ প্রদান করতে সহায়তা করব।"
-          : "Hello! I am your MediBridge Smart Care Navigator. Describe your symptoms or health questions, and I will recommend the right clinical specialty, provide pre-consultation guidance, and check for safety red flags.",
+          ? "আসসালামু আলাইকুম। আমি আপনার হিলিংক্স কেয়ার নেভিগেটর। আপনার শারীরিক কোনো লক্ষণ বা স্বাস্থ্য সমস্যা আমাকে জানান, আমি সঠিক বিশেষজ্ঞ ডাক্তার নির্ধারণ ও পরামর্শ প্রদান করতে সহায়তা করব।"
+          : "Hello! I am your HEALYNX Smart Care Navigator. Describe your symptoms or health questions, and I will recommend the right clinical specialty, provide pre-consultation guidance, and check for safety red flags.",
       timestamp: new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }),
     },
   ]);
@@ -522,7 +522,7 @@ export default function SmartCareNavigator() {
           <div className="rounded-xl border border-line/70 bg-s2/60 p-4 text-xs text-muted flex items-start gap-3">
             <ShieldCheck className="h-4 w-4 text-primary shrink-0 mt-0.5" />
             <p>
-              <span className="font-semibold text-ink">MediBridge Safety Notice:</span> The Smart Care Navigator provides healthcare triage, navigation, and provider discovery. It is strictly informational and does not replace the diagnostic judgment of a licensed medical practitioner.
+              <span className="font-semibold text-ink">HEALYNX Safety Notice:</span> The Smart Care Navigator provides healthcare triage, navigation, and provider discovery. It is strictly informational and does not replace the diagnostic judgment of a licensed medical practitioner.
             </p>
           </div>
         </div>

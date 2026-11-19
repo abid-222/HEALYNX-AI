@@ -80,7 +80,7 @@ export function AppShell({ children }: { children: ReactNode }) {
   // Read collapsed state from localStorage
   useEffect(() => {
     try {
-      const stored = localStorage.getItem("medibridge_sidebar_collapsed");
+      const stored = localStorage.getItem("healynx_sidebar_collapsed") || localStorage.getItem("medibridge_sidebar_collapsed");
       if (stored !== null) setCollapsed(stored === "true");
     } catch {}
   }, []);
@@ -89,7 +89,7 @@ export function AppShell({ children }: { children: ReactNode }) {
     setCollapsed((prev) => {
       const next = !prev;
       try {
-        localStorage.setItem("medibridge_sidebar_collapsed", String(next));
+        localStorage.setItem("healynx_sidebar_collapsed", String(next));
       } catch {}
       return next;
     });

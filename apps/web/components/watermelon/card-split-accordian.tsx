@@ -57,7 +57,7 @@ const DEFAULT_ITEMS: AccordionItemData[] = [
     icon: <Video className="h-5 w-5 text-primary" />,
     tag: "TELEHEALTH",
     content:
-      "All consultations in MediBridge AI are conducted strictly online. When an appointment is confirmed, an encrypted Google Meet room is automatically generated with automated time slot verification, eliminating clinic waiting room congestion.",
+      "All consultations in HEALYNX-AI are conducted strictly online. When an appointment is confirmed, an encrypted Google Meet room is automatically generated with automated time slot verification, eliminating clinic waiting room congestion.",
   },
   {
     id: 4,
