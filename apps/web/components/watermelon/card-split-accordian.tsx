@@ -144,7 +144,7 @@ const AccordionItem: FC<AccordionItemProps> = ({
             <div className="min-w-0 flex-1">
               {item.tag && (
                 <span className="text-[9px] sm:text-[10px] font-mono tracking-widest text-primary/80 uppercase block mb-0.5 truncate">
-                  // {item.tag}
+                  {`// ${item.tag}`}
                 </span>
               )}
               <span className="text-xs sm:text-sm md:text-base font-bold text-ink tracking-tight block leading-snug">

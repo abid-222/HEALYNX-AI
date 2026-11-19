@@ -182,7 +182,7 @@ export default function Login() {
             <HeartPulse className="h-6 w-6" />
           </div>
           <span className="font-heading font-extrabold text-2xl tracking-tight text-ink">
-            {isBn ? "নিরাময়" : "Niramoy"}{" "}
+            {isBn ? "হিলিংক্স" : "HEALYNX"}{" "}
             <span className="text-ptext font-mono font-black">AI</span>
           </span>
         </Link>
@@ -361,7 +361,7 @@ export default function Login() {
         <div className="rounded-2xl border border-line bg-s2/40 p-4 text-center sm:text-left flex flex-col sm:flex-row items-center justify-between gap-3">
           <div>
             <p className="text-xs font-bold text-ink">
-              {isBn ? "নতুন রোগী? ডিজিটাল অ্যাকাউন্ট নেই?" : "New to Niramoy AI?"}
+              {isBn ? "নতুন রোগী? ডিজিটাল অ্যাকাউন্ট নেই?" : "New to HEALYNX-AI?"}
             </p>
             <p className="text-[11px] text-muted mt-0.5">
               {isBn

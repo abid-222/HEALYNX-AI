@@ -1,11 +1,11 @@
-# 🌿 Niramoy AI (নিরাময় এআই)
+# 🌿 HEALYNX-AI (হিলিংক্স এআই)
 
 <div align="center">
 
-![Niramoy AI Banner](https://raw.githubusercontent.com/abid-222/MediBrdige-BY-ByteForce/main/apps/web/public/favicon.ico)
+![HEALYNX-AI Banner](https://raw.githubusercontent.com/abid-222/MediBrdige-BY-ByteForce/main/apps/web/public/favicon.ico)
 
 ### **Next-Generation Open Clinical Intelligence & Healthcare Orchestration Engine for Bangladesh**
-*Formerly MediBridge AI · Engineered with pride by **ByteForce***
+*Engineered with pride by **ByteForce***
 
 > **"AI assists. Doctors decide. Patients stay in control."**  
 > *কৃত্রিম বুদ্ধিমত্তা সহায়তা করবে, সিদ্ধান্ত নেবেন চিকিৎসক, নিয়ন্ত্রণ থাকবে রোগীর হাতে।*
@@ -37,7 +37,7 @@
 
 In Bangladesh, healthcare remains fragmented across paper prescriptions, siloed diagnostic labs, and unstructured reports. Patients carry heavy polybags of paper history, doctors lack longitudinal trends during 3-minute consultations, and emergency responders have zero offline access to critical medical IDs.
 
-**Niramoy AI (নিরাময় এআই)** bridges this divide. It is a full-stack, open-standard clinical orchestration platform tailored specifically for the healthcare realities of Bangladesh:
+**HEALYNX-AI (হিলিংক্স এআই)** bridges this divide. It is a full-stack, open-standard clinical orchestration platform tailored specifically for the healthcare realities of Bangladesh:
 - 🇧🇩 **Bangla + English Bilingual Interface** with culturally adapted triage logic.
 - 🩺 **Deterministic Clinical Safety Gates**: Emergency red flags bypass AI completely and trigger immediate hospital routing.
 - 📊 **Longitudinal Trend Studio**: Tracks CBC, Blood Glucose, HbA1c, and Lipid profiles across years and multiple diagnostic providers.
@@ -48,7 +48,7 @@ In Bangladesh, healthcare remains fragmented across paper prescriptions, siloed 
 
 ## 🏗️ System Architecture
 
-Niramoy AI employs a **Dual-Gate Safety & Privacy Architecture**. Sensitive medical data is isolated under strict consent relationships, and all AI interactions pass through deterministic clinical safety filters.
+HEALYNX-AI employs a **Dual-Gate Safety & Privacy Architecture**. Sensitive medical data is isolated under strict consent relationships, and all AI interactions pass through deterministic clinical safety filters.
 
 ```mermaid
 flowchart TD
@@ -207,7 +207,7 @@ make check
 
 ## 🛡️ Clinical Safety & Audit Framework
 
-1. **AI Never Prescribes**: Niramoy AI is an assistive decision-support framework. It does not provide diagnoses, final prescriptions, or dosage determinations.
+1. **AI Never Prescribes**: HEALYNX-AI is an assistive decision-support framework. It does not provide diagnoses, final prescriptions, or dosage determinations.
 2. **Deterministic Pre-emption**: Red-flag symptom checks occur in pure Python code before any AI model is invoked.
 3. **Immutable Audit Trail**: Every data access, consent grant, and clinical note revision is recorded in an append-only audit log with SHA-256 integrity checks.
 4. **Account Enumeration Protection**: Authentication endpoints return identical generic responses for both registered and unregistered identifiers.
@@ -217,7 +217,7 @@ make check
 ## 📂 Project Organization
 
 ```text
-medibridge/
+healynx/
 ├── apps/
 │   ├── api/                     # FastAPI Backend
 │   │   ├── app/
@@ -258,7 +258,7 @@ Crafted with dedication by **Team ByteForce**:
 
 <div align="center">
 
-**Niramoy AI** · Empowering healthcare across Bangladesh with transparency, safety, and intelligence.
+**HEALYNX-AI** · Empowering healthcare across Bangladesh with transparency, safety, and intelligence.
 
 *Licensed under the [MIT License](LICENSE).*
 

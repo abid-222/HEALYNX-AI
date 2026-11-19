@@ -505,7 +505,7 @@ export default function PatientChartPage() {
                 <span>Extracted Lab Markers</span>
               </h2>
               <p className="text-[11px] text-muted">
-                Verify values to lock them into the patient's official clinical record
+                Verify values to lock them into the patient&apos;s official clinical record
               </p>
             </div>
             <Button

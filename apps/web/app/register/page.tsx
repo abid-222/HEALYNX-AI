@@ -530,8 +530,8 @@ export default function Register() {
               />
               <span className="text-xs text-ink/90 leading-relaxed">
                 {isBn
-                  ? "আমি নিশ্চিত করছি যে প্রদত্ত স্বাস্থ্য তথ্য সঠিক এবং আমি মেডিট্রিজ এআই-এর ডিজিটাল স্বাস্থ্য রেকর্ড ও নিরাপত্তা নীতিমালা মেনে চলছি। চিকিৎসকের পর্যালোচনার পূর্ব পর্যন্ত এআই পরামর্শ তথ্যমূলক সহায়িকা হিসেবে গণ্য হবে।"
-                  : "I confirm the medical details provided are accurate and consent to digital health record storage under MediBridge AI privacy standards. I understand AI clinical insights assist and do not replace final doctor judgment."}
+                  ? "আমি নিশ্চিত করছি যে প্রদত্ত স্বাস্থ্য তথ্য সঠিক এবং আমি হিলিংক্স এআই-এর ডিজিটাল স্বাস্থ্য রেকর্ড ও নিরাপত্তা নীতিমালা মেনে চলছি। চিকিৎসকের পর্যালোচনার পূর্ব পর্যন্ত এআই পরামর্শ তথ্যমূলক সহায়িকা হিসেবে গণ্য হবে।"
+                  : "I confirm the medical details provided are accurate and consent to digital health record storage under HEALYNX-AI privacy standards. I understand AI clinical insights assist and do not replace final doctor judgment."}
               </span>
             </label>
           </div>

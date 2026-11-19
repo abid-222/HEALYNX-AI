@@ -651,7 +651,7 @@ export default function AdminDashboardPage() {
                 Clinical Audit Defaults (Optional Preset)
               </h3>
               <span className="text-[11px] text-muted">
-                Tip: Clicking any "Verify", "Revoke", or "Review" button below opens an interactive prompt to write or confirm your reason.
+                Tip: Clicking any &quot;Verify&quot;, &quot;Revoke&quot;, or &quot;Review&quot; button below opens an interactive prompt to write or confirm your reason.
               </span>
             </div>
             <div className="grid gap-3 md:grid-cols-2">

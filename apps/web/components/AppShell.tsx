@@ -278,7 +278,7 @@ export function AppShell({ children }: { children: ReactNode }) {
               </span>
               {!collapsed && (
                 <span className="fade-in font-bold">
-                  Niramoy <span className="text-ptext">AI</span>
+                  HEALYNX <span className="text-ptext">AI</span>
                 </span>
               )}
             </Link>
@@ -388,7 +388,7 @@ export function AppShell({ children }: { children: ReactNode }) {
                   <HeartPulse className="h-5 w-5" />
                 </span>
                 <span>
-                  MediBridge <span className="text-ptext">AI</span>
+                  HEALYNX <span className="text-ptext">AI</span>
                 </span>
               </Link>
               <button

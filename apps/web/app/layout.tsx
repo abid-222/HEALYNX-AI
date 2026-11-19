@@ -6,8 +6,8 @@ import { AppShell } from "@/components/AppShell";
 import { ToastProvider } from "@/components/ui";
 
 export const metadata = {
-  title: "Niramoy AI — AI Assists. Doctors Decide. Patients Stay in Control.",
-  description: "Next-generation healthcare coordination and report intelligence prototype for Bangladesh.",
+  title: "HEALYNX-AI — AI Assists. Doctors Decide. Patients Stay in Control.",
+  description: "HEALYNX-AI: Next-generation healthcare coordination and clinical intelligence engine for Bangladesh.",
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
