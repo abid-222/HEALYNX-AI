@@ -29,7 +29,9 @@ from app.models import (
     Facility,
     Observation,
     PatientProfile,
+    Prescription,
     Profile,
+    Specialty,
     TestCatalog,
 )
 from app.modules.documents import service as docsvc
@@ -110,15 +112,17 @@ def seed():
     # Update doctor1 name and verification
     doc_prof = db.query(DoctorProfile).filter(DoctorProfile.user_id == doctor1.id).first()
     if doc_prof:
-        doc_prof.full_name = "Dr. Rahim Ahmed"
+        doc_prof.full_name = "Prof. Dr. Anisur Rahman"
+        doc_prof.bmdc_number = "A-48291"
         doc_prof.verification = "verified"
-        doc_prof.experience_years = 14
-        doc_prof.qualifications = ["MBBS", "FCPS (Medicine)", "MRCP (UK)"]
-        doc_prof.last_verified_at = now - timedelta(days=5)
+        doc_prof.experience_years = 18
+        doc_prof.qualifications = ["MBBS (DMC)", "FCPS (Medicine)", "MD (Cardiology)", "FACC (USA)"]
+        doc_prof.bio = "Professor & Senior Consultant in Cardiology and Internal Medicine with over 18 years of clinical experience. BMDC Reg #A-48291. Available for chamber consultations and digital follow-ups."
+        doc_prof.last_verified_at = now - timedelta(days=2)
 
     pat_prof = db.query(PatientProfile).filter(PatientProfile.user_id == patient1.id).first()
     if pat_prof:
-        pat_prof.full_name = "Mohammad Anisur Rahman"
+        pat_prof.full_name = "Rahim Chowdhury"
         pat_prof.phone = "01712345678"
         pat_prof.dob = "1988-05-14"
         pat_prof.sex = "male"
@@ -167,6 +171,29 @@ def seed():
     # 3. Create Demo Consultations / Appointments
     facility = db.query(Facility).first()
     fac_id = facility.id if facility else None
+
+    # Ensure DoctorFacility (Chamber) details for doctor1
+    if fac_id:
+        doc_fac = db.query(DoctorFacility).filter(
+            DoctorFacility.doctor_id == doctor1.id,
+            DoctorFacility.facility_id == fac_id
+        ).first()
+        if not doc_fac:
+            doc_fac = DoctorFacility(
+                doctor_id=doctor1.id,
+                facility_id=fac_id,
+                chamber="Room 402, Level 4 (Cardiology Block)",
+                schedule={"days": ["Saturday", "Sunday", "Tuesday", "Thursday"], "hours": "05:00 PM - 09:00 PM"},
+                fee_bdt=1200,
+                fee_confirmed_at=now - timedelta(days=5)
+            )
+            db.add(doc_fac)
+        else:
+            doc_fac.chamber = "Room 402, Level 4 (Cardiology Block)"
+            doc_fac.schedule = {"days": ["Saturday", "Sunday", "Tuesday", "Thursday"], "hours": "05:00 PM - 09:00 PM"}
+            doc_fac.fee_bdt = 1200
+            doc_fac.fee_confirmed_at = now - timedelta(days=5)
+        db.commit()
 
     # Clear existing demo appointments for clean slate
     db.query(AppointmentEvent).filter(AppointmentEvent.actor_id.in_([patient1.id, doctor1.id])).delete(synchronize_session=False)
@@ -220,6 +247,49 @@ def seed():
 
     db.commit()
     print("Seeded 3 appointments between patient1 and doctor1 (confirmed, requested, completed).")
+
+    # 3b. Seed Issued Prescription for completed consultation (appt3)
+    db.query(Prescription).filter(Prescription.patient_id == patient1.id).delete(synchronize_session=False)
+    db.commit()
+
+    demo_rx = Prescription(
+        patient_id=patient1.id,
+        doctor_id=doctor1.id,
+        appointment_id=appt3.id,
+        diagnosis="Microcytic hypochromic mild anemia with intermittent tension headache",
+        clinical_notes="Patient presented with mild fatigue and recurring headaches. CBC confirms mild low hemoglobin (10.2 g/dL). Advised iron-rich balanced diet, proper sleep schedule, hydration, and review after 4 weeks.",
+        medications=[
+            {
+                "name": "Tab. Napa Extra (Paracetamol 500mg + Caffeine 65mg)",
+                "dosage": "1 tablet",
+                "frequency": "1+0+1",
+                "duration": "5 days",
+                "instructions": "Take after meals for headache as needed"
+            },
+            {
+                "name": "Tab. Seclo (Omeprazole 20mg)",
+                "dosage": "1 capsule",
+                "frequency": "1+0+1",
+                "duration": "14 days",
+                "instructions": "Take 30 minutes before meal with a full glass of water"
+            },
+            {
+                "name": "Tab. Fefol-CI (Carbonyl Iron + Folic Acid + Vit C)",
+                "dosage": "1 capsule",
+                "frequency": "0+1+0",
+                "duration": "30 days",
+                "instructions": "Take once daily after lunch"
+            }
+        ],
+        follow_up_recommendation="Follow-up in 4 weeks with a fresh CBC and Serum Ferritin report.",
+        status="issued",
+        version=1,
+        issued_at=now - timedelta(days=2),
+        consultation_date=past_slot
+    )
+    db.add(demo_rx)
+    db.commit()
+    print("Seeded issued digital prescription for patient1 by doctor1.")
 
     # 4. Generate Test PDF files in apps/web/public/sample_reports/
     os.makedirs(PUBLIC_DIR, exist_ok=True)
